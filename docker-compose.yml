@@ -1,0 +1,23 @@
+version: "3.8"
+
+services:
+  nginx-server:
+    image: nginx:latest
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+
+  hello-1:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - HELLO_MESSAGE=Hello from service 1
+
+  hello-2:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - HELLO_MESSAGE=Hello from service 2

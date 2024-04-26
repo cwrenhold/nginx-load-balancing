@@ -1,0 +1,6 @@
+{
+    "name": "nginx-load-balancing Dev Container",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "app",
+    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}"
+}
